@@ -1,14 +1,15 @@
 
 *{
   box-sizing:border-box;
-  background-color:wheat;  
-    width:1260px;
+  width:1260px;
 }
+/* <img src="assets/images/bluesky1.jpg" style="width:200px;height:200px"> */
 body{
     display:flex;
+    margin-left:150px;
     font-family: Arial, Helvetica, sans-serif;
-    /* margin-left:150px; */
-    /* background-color:#ffffff; */
+    background-image:url("assets/images/bluesky1.jpg") style="width:200px;height:200px";  
+    background-repeat:space;  
     width:1260px;
     flex-direction: column;
     height: 500vh;
@@ -81,12 +82,20 @@ p{
   background-color:#ffffff;
   /* margin-left:150px; */
 }
-footer{
-  border: 2px solid black;
-  width:1260;
-  /* border-top: 15px; */
+#spanner{
+  height:6px;
+  width:1260px;
+  margin-left:-150px;
+  background-color:#4aaaa5;
+}
 
-  /* background-color:#666666; */
+footer{
+  width:1260;
+  height:40px;
+  border-top: 0;
+  margin-top:0px;
+  margin-left:-150px;
+  background-color:#666666;
 }
     
 #urname{
@@ -140,6 +149,26 @@ footer{
   margin-bottom:0px;
   
   }
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
 
 .push {
     margin-left: auto;
@@ -152,11 +181,38 @@ footer{
   margin-left:150px;
   margin-right:150px;
 }
+
+.column {
+  float: left;
+}
+
+/* Left and right column */
+.column.side {
+  width: 12.9%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 76.2%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
 .footer {
   flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
   padding: 20px;
-  background-color:dodgerblue;
-}
+  
+ }
 
 
  
